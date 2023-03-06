@@ -1,0 +1,241 @@
+:root{
+  --clr-primary-cyan: hsl(185, 75%, 39%);
+  --clr-primary-blue: hsl(229, 23%, 23%);
+  --clr-primary-grayish-blue: hsl(227, 10%, 46%);
+
+  --clr-neutral-gray: hsl(0, 0%, 59%);
+  
+  --fw-ligt: 200;
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/  
+html, body {
+  height: 100%;
+}
+
+.shape{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow: hidden;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+body{
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  font-weight: var(--fw-regular);
+  margin: 0;
+  padding: 0;
+  background-color:  var(--clr-primary-cyan);
+  overflow: hidden;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* parent of the circle shape */
+.shape{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* circle top background picture */
+.background-circle-top {
+  position: absolute;
+  left: -290px;
+  top: -260px;
+  width: 500px;
+  height: 500px;
+  opacity: 0.8;
+}
+
+.background-circle-bottom{
+  position: absolute;
+  right: -460px;
+  bottom: -380px;
+  width: 700px;
+  height: 700px;
+  opacity: 0.8;
+}
+
+.card-container{
+  margin: 1.35em;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+
+  border-radius: 1em;
+  overflow: hidden;
+  position: relative;
+}
+
+.header{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.profile-content{
+  background-color: rgb(255, 255, 255);
+  padding: .5em;
+  padding-bottom: 1.2em;
+}
+
+.profile-picture-container{
+  display: flex;
+  justify-content: center;
+}
+
+.content-picture{
+  height: auto;
+  width: auto;
+  border: .3em solid rgb(255, 255, 255);
+  border-radius: 50%;
+  position: absolute;
+  top: 83px;
+}
+
+.profile-content-name{
+  font-size: 18px;
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary-blue);
+  margin: 60px 0px 0px;
+}
+
+.profile-content-name .profile-content-age{
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-gray);
+  margin-left: 5px;
+}
+
+.profile-content-address{
+  font-size: .7em;
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-gray);
+  margin-top: .5rem;
+}
+
+.social{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.3em;
+}
+
+.sub-social{
+  flex: 1 1 0;
+}
+
+.sub-social .total{
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary-blue);
+}
+
+.sub-social .word{
+  font-size: .5em;
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-gray);
+  margin-top: .25rem;
+  letter-spacing: 1px;
+}
+
+hr{
+  border-top: 0;
+  color: rgb(211, 211, 211);
+}
+
+@media screen and (max-width: 2440px) {
+
+  /* circle top background picture */
+  .background-circle-top {
+    width: 100vh;
+    position: relative;
+    left: -220px; /* adjust as needed */
+    top: -560px; /* adjust as needed */
+    width: 1000px;
+    height: 500px;
+    opacity: 0.8;
+  }
+  
+  .background-circle-bottom {
+    position: absolute;
+    right: -180px; /* adjust as needed */
+    bottom: -360px; /* adjust as needed */
+    width: 1000px;
+    height: 700px;
+    opacity: 0.8;
+  }
+}
+
+@media screen and (max-width: 376px) {
+ 
+  /* circle top background picture */
+  .background-circle-top {
+    position: absolute;
+    left: -770px; /* adjust as needed */
+    top: -560px; /* adjust as needed */
+    width: 1000px;
+    height: 500px;
+    opacity: 0.8;
+  }
+  
+  .background-circle-bottom {
+    position: absolute;
+    right: -730px; /* adjust as needed */
+    bottom: -345px; /* adjust as needed */
+    width: 1000px;
+    height: 700px;
+    opacity: 0.8;
+  }
+}
